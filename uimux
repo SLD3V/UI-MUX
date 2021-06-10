@@ -1,0 +1,104 @@
+#! /data/data/com.termux/files/usr/bin/bash
+
+# _   _ ___      __  __ _   ___  __
+# | | | |_ _|    |  \/  | | | \ \/ /
+# | | | || |_____| |\/| | | | |\  /
+# | |_| || |_____| |  | | |_| |/  \
+#  \___/|___|    |_|  |_|\___//_/\_\
+
+# DEV : SH3H4N
+# CONTACT : https://github.com/SH3H4N
+
+# ======================================
+
+
+
+
+# _____ INSTALL REQUIREMENTS _____
+
+
+installReq() {
+
+	cd $HOME && clear #--goto home
+	pkg update -y && pkg upgrade -y #--update packages
+	pkg install curl -y #--install curl
+	pkg install zsh -y && chsh -s zsh #--install zsh
+	pkg install screenfetch -y #--install screenfetch
+	pkg install figlet -y && clear #--install figlet
+
+}
+
+
+# _____ INSTALL TERMUX STYLE _____
+
+
+tmxStyle() {
+
+	cd $HOME && clear #--goto home
+	git clone https://github.com/adi1090x/termux-style #--clone termux-style
+	cd termux-style && bash install #--install termux-style
+	clear #--clear
+
+}
+
+
+# _____ INSTALL TERMUX OMZ _______
+
+
+termuxOmz() {
+
+	cd $HOME && clear #--goto home
+	git clone https://github.com/adi1090x/termux-omz.git #--clone termux OMZ
+	cd termux-omz #--goto directory
+	chmod +x install && bash install #--install program
+	clear #--clear
+
+}
+
+
+# _____ BANNER ____________________
+
+
+banner() {
+
+	cd $HOME && clear #--goto home
+	figlet UI-MUX
+	echo "==================================="
+	echo " "
+	echo "Dev : SH3H4N"
+	echo " "
+	echo "ui-mux has successfully installed. "
+	echo " "
+	echo "==================================="
+	echo " "
+
+}
+
+
+
+
+# ____ EXTRA KEYS FOR TERMUX _____
+
+
+extraKey() {
+
+	mkdir $HOME/.termux/ ;echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" >> $HOME/.termux/termux.properties && termux-reload-settings && sleep 1 &&logout
+	cd $HOME && clear #--goto home
+}
+
+
+
+
+# _____ RUN _______________________
+
+
+installReq
+tmxStyle
+termuxOmz
+extraKey
+banner
+
+
+
+
+# _____ EOF _______________________
