@@ -1,11 +1,21 @@
 # UI-MUX
-Simple shell script that can install termux-omz and termux-style packages. For lazy people.
+
+<b>Simple shell script that can install termux-omz and termux-style packages. For lazy people.</b>
+<hr>
 
 <B> INSTRUCTIONS </B>
 
-- git clone https://github.com/SLD3V/UI-MUX
-- cd UI-MUX
-- chmod +x uimux
-- bash uimux
+<code>
+<ul>
+
+<li> git clone https://github.com/SLD3V/UI-MUX
+<li> cd UI-MUX
+<li> chmod +x uimux
+<li> bash uimux
+
+</ul>
+</code>
+
+<hr>
 
 credits : https://github.com/adi1090x
